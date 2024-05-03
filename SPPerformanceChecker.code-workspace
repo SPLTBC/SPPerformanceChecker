@@ -5,7 +5,10 @@
         },
         {
             "path": ".github"
-        }
+        },
+		{
+			"path": "SPPerformanceChecker"
+		}
     ],
     "settings": {}
 }

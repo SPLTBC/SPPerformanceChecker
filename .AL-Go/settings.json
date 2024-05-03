@@ -1,6 +1,7 @@
 {
   "country": "lt",
-  "appFolders": [],
+  "appFolders": ["SPPerformanceChecker"],
   "testFolders": [],
-  "bcptTestFolders": []
+  "bcptTestFolders": [],
+  "projectName": "SP Performance Checker"
 }

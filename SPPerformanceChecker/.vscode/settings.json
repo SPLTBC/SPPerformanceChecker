@@ -1,0 +1,10 @@
+{
+    "al.codeAnalyzers": [
+        "${CodeCop}",
+        "${PerTenantExtensionCop}",
+        "${UICop}"
+    ],
+    "al.enableCodeAnalysis": true,
+    "al.backgroundCodeAnalysis": true,
+    "al.ruleSetPath": "./sp.ruleset.json"
+}

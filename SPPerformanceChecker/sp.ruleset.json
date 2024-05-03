@@ -1,0 +1,10 @@
+{
+    "name": "sp ruleset",
+    "rules": [
+        {
+            "id": "AL0468",
+            "action": "Error",
+            "justification": "Make rule action as Error instead of Warning. Length of the table field name X must not exceed 30 characters."
+        }
+    ]
+}
