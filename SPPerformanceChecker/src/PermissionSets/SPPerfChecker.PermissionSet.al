@@ -10,5 +10,9 @@ permissionset 56010 "SP Perf. Checker"
         codeunit "SP Performance Checker Mgt." = X,
         tabledata "SP Performance Checker Log" = RIMD,
         table "SP Performance Checker Log" = X,
-        page "SP Performance Checker Log" = X;
+        page "SP Performance Checker Log" = X,
+        codeunit "SP Perf. Checker Create Item" = X,
+        codeunit "SP Perf. Checker Create Cust." = X,
+        codeunit "SP Perf. Checker Create Vendor" = X,
+        codeunit "SP Perf. Checker Create SO" = X;
 }

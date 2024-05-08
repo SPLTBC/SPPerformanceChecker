@@ -4,13 +4,20 @@
   "publisher": "StrongPoint",
   "version": "1.0.0.0",
   "brief": "StrongPoint Extension for checking performance",
-  "description": "StrongPoint Extension for checking performance",
+  "description": "This extension provides tests that simulate business processes, such as creating sales orders, for the Business Central Performance Toolkit. Developers can use these to test for performance regressions during development.",
   "privacyStatement": "",
   "EULA": "",
   "help": "",
   "url": "http://www.prekybosvaldymas.lt",
   "logo": "images/splogo_iVz_icon.ico",
-  "dependencies": [],
+  "dependencies": [
+    {
+      "id": "75f1590f-55c5-4501-ae63-bada5534e852",
+      "publisher": "Microsoft",
+      "name": "Performance Toolkit",
+      "version": "24.0.0.0"
+    }
+  ],
   "screenshots": [],
   "platform": "19.0.0.0",
   "application": "19.0.0.0",
@@ -18,6 +25,10 @@
     {
       "from": 56010,
       "to": 56019
+    },
+    {
+      "from": 149100,
+      "to": 149499
     }
   ],
   "resourceExposurePolicy": {
@@ -25,7 +36,7 @@
     "allowDownloadingSource": true,
     "includeSourceInSymbolFile": true
   },
-  "runtime": "8.0",
+  "runtime": "12.0",
   "features": [
     "TranslationFile",
     "GenerateCaptions"
