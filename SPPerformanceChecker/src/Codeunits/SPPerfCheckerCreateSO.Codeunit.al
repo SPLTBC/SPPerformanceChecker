@@ -15,7 +15,9 @@ codeunit 56014 "SP Perf. Checker Create SO" implements "BCPT Test Param. Provide
         BCPTTestContext: Codeunit "BCPT Test Context";
         IsInitialized: Boolean;
         NoOfLinesToCreate: Integer;
+        CustomerNo: Code[20];
         NoOfLinesParamLbl: Label 'Lines';
+        CustomerNoLbl: Label 'Customer';
         ParamValidationErr: Label 'Parameter is not defined in the correct format. The expected format is "%1"', Comment = '%1 - parameter name';
 
 
@@ -38,6 +40,7 @@ codeunit 56014 "SP Perf. Checker Create SO" implements "BCPT Test Param. Provide
         Commit();
 
         if Evaluate(NoOfLinesToCreate, BCPTTestContext.GetParameter(NoOfLinesParamLbl)) then;
+        CustomerNo := BCPTTestContext.GetParameter(CustomerNoLbl);
     end;
 
     local procedure CreateSalesOrder(var BCPTTestContext: Codeunit "BCPT Test Context")
@@ -48,8 +51,9 @@ codeunit 56014 "SP Perf. Checker Create SO" implements "BCPT Test Param. Provide
         SalesLine: Record "Sales Line";
         i: Integer;
     begin
-        if not Customer.Get('10000') then
-            Customer.FindFirst();
+        if not Customer.Get(CustomerNo) then
+            if not Customer.Get('10000') then
+                Customer.FindFirst();
         if not Item.Get('70000') then
             Item.FindSet();
         if NoOfLinesToCreate < 0 then
