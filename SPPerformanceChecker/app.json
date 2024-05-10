@@ -2,7 +2,7 @@
   "id": "3bc594e4-de37-43c2-ac59-a0cd57dfb24e",
   "name": "SP Performance Checker",
   "publisher": "StrongPoint",
-  "version": "1.0.0.0",
+  "version": "1.0.0.1",
   "brief": "StrongPoint Extension for checking performance",
   "description": "This extension provides tests that simulate business processes, such as creating sales orders, for the Business Central Performance Toolkit. Developers can use these to test for performance regressions during development.",
   "privacyStatement": "",
