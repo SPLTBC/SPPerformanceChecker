@@ -6,6 +6,7 @@
   "enableUICop": true,
   "generateDependencyArtifact": true,
   "updateDependencies": true,
+  "useProjectDependencies": true,
   "CurrentSchedule": "0 2 * * *",
   "NextMinorSchedule": "0 2 * * 6",
   "NextMajorSchedule": "0 2 * * 0"
