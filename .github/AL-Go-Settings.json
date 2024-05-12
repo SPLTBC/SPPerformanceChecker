@@ -4,8 +4,6 @@
   "templateSha": "0af8feb4cf098ebec44278866877fc9aceff0513",
   "enableCodeCop": true,
   "enableUICop": true,
-  "generateDependencyArtifact": true,
-  "updateDependencies": true,
   "useProjectDependencies": true,
   "CurrentSchedule": "0 2 * * *",
   "NextMinorSchedule": "0 2 * * 6",
