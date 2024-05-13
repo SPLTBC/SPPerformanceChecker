@@ -3,5 +3,6 @@
   "appFolders": ["SPPerformanceChecker"],
   "testFolders": [],
   "bcptTestFolders": [],
-  "projectName": "SP Performance Checker"
+  "projectName": "SP Performance Checker",
+  "generateDependencyArtifact": true
 }
