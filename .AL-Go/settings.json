@@ -1,5 +1,5 @@
 {
-  "country": "lt",
+  "country": "base",
   "appFolders": ["SPPerformanceChecker"],
   "testFolders": [],
   "bcptTestFolders": [],
