@@ -11,11 +11,10 @@
   "url": "http://www.prekybosvaldymas.lt",
   "logo": "images/splogo_iVz_icon.ico",
   "dependencies": [
-
     {
-      "id": "4ce93371-6bd6-4027-a78f-021064ad250e",
+      "id": "75f1590f-55c5-4501-ae63-bada5534e852",
       "publisher": "Microsoft",
-      "name": "SAF-T",
+      "name": "Performance Toolkit",
       "version": "24.0.0.0"
     }
   ],
