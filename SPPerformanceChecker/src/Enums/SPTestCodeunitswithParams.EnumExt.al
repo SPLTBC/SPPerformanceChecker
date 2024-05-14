@@ -1,5 +1,9 @@
 enumextension 56010 "SP Test Codeunits with Params" extends "BCPT Test Param. Enum"
 {
+    value(56011; "56011")
+    {
+        Implementation = "BCPT Test Param. Provider" = "SP Perf. Checker Create Item";
+    }
     value(56012; "56012")
     {
         Implementation = "BCPT Test Param. Provider" = "SP Perf. Checker Create Cust.";

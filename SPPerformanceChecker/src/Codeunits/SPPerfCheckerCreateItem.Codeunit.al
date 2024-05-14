@@ -1,10 +1,16 @@
-codeunit 56011 "SP Perf. Checker Create Item"
+codeunit 56011 "SP Perf. Checker Create Item" implements "BCPT Test Param. Provider"
 {
     trigger OnRun()
     begin
         InitTest();
         CreateItem();
     end;
+
+    var
+        ItemTemplateToUse: Code[20];
+        ItemTemplateParamLbl: Label 'Item Template';
+        ParamValidationErr: Label 'Parameter is not defined in the correct format. The expected format is "%1"', Comment = '%1 = Default Parameter';
+
 
     local procedure InitTest();
     var
@@ -100,6 +106,21 @@ codeunit 56011 "SP Perf. Checker Create Item"
         RandomDecimal := Round(Random(100) / 100, 2);
         RandomDecimal := Random(MaxNumber) + 1 + RandomDecimal;
         exit(RandomDecimal);
+    end;
+
+    procedure GetDefaultParameters(): Text[1000]
+    begin
+        exit(CopyStr(ItemTemplateParamLbl + '=', 1, 1000));
+    end;
+
+    procedure ValidateParameters(Parameters: Text[1000])
+    begin
+        if StrPos(Parameters, ItemTemplateParamLbl) > 0 then begin
+            Parameters := DelStr(Parameters, 1, StrLen(ItemTemplateParamLbl + '='));
+            if Evaluate(ItemTemplateToUse, Parameters) then
+                exit;
+        end;
+        Error(ParamValidationErr, GetDefaultParameters());
     end;
 
     [IntegrationEvent(false, false)]
